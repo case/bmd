@@ -4,6 +4,7 @@
       "id": "president",
       "type": "plurality",
       "title": "President",
+      "seats": 1,
       "candidates": [
         {
           "id": "minnieMouse",
@@ -23,6 +24,7 @@
       "id": "senator",
       "type": "plurality",
       "title": "Senator",
+      "seats": 1,
       "candidates": [
         {
           "id": "chadHanging",

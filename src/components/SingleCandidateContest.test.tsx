@@ -6,11 +6,8 @@ import election from '../../public/data/election.json'
 
 import SingleCandidateContest from './SingleCandidateContest'
 
-const presidentName = 'Minnie Mouse'
-const presidentId = 'minnieMouse'
-const updateVote = jest.fn(value => value === presidentId)
-
 it(`renders SingleCandidateContest with no selection`, async () => {
+  const updateVote = jest.fn()
   const { container, getByText } = render(
     <SingleCandidateContest
       contest={election.contests[0]}
@@ -18,22 +15,26 @@ it(`renders SingleCandidateContest with no selection`, async () => {
       updateVote={updateVote}
     />
   )
-  fireEvent.click(getByText(presidentName))
+  fireEvent.click(getByText('Minnie Mouse'))
   expect(updateVote).toHaveBeenCalled()
   expect(container).toMatchSnapshot()
   expect(await axe(container.innerHTML)).toHaveNoViolations()
 })
 
-it(`renders SingleCandidateContest with ${presidentName} selected`, async () => {
-  const { container, getByText } = render(
+it(`renders SingleCandidateContest with Minnie Mouse selected`, async () => {
+  const updateVote = jest.fn()
+  const { container, getByText, getByLabelText, debug } = render(
     <SingleCandidateContest
       contest={election.contests[0]}
-      vote={presidentId}
+      vote={'minnieMouse'}
       updateVote={updateVote}
     />
   )
-  fireEvent.click(getByText(presidentName))
-  expect(updateVote).toHaveBeenCalled()
+  debug(container)
+  debug(getByLabelText('Mickey Mouse'))
+  // expect(getByLabelText('Mickey Mouse').disabled).toBeTruthy()
+  // fireEvent.click(getByText('Minnie Mouse'))
+  // expect(updateVote).toHaveBeenCalled()
   expect(container).toMatchSnapshot()
   expect(await axe(container.innerHTML)).toHaveNoViolations()
 })

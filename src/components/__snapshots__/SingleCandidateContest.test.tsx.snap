@@ -89,7 +89,7 @@ exports[`renders SingleCandidateContest with Minnie Mouse selected 1`] = `
           class="c4"
           id="minnieMouse"
           name="president"
-          type="radio"
+          type="checkbox"
           value="minnieMouse"
         />
          
@@ -101,9 +101,10 @@ exports[`renders SingleCandidateContest with Minnie Mouse selected 1`] = `
       >
         <input
           class="c4"
+          disabled=""
           id="mickeyMouse"
           name="president"
-          type="radio"
+          type="checkbox"
           value="mickeyMouse"
         />
          
@@ -115,9 +116,10 @@ exports[`renders SingleCandidateContest with Minnie Mouse selected 1`] = `
       >
         <input
           class="c4"
+          disabled=""
           id="donaldDuck"
           name="president"
-          type="radio"
+          type="checkbox"
           value="donaldDuck"
         />
          
@@ -197,7 +199,7 @@ exports[`renders SingleCandidateContest with no selection 1`] = `
           class="c4"
           id="minnieMouse"
           name="president"
-          type="radio"
+          type="checkbox"
           value="minnieMouse"
         />
          
@@ -211,7 +213,7 @@ exports[`renders SingleCandidateContest with no selection 1`] = `
           class="c4"
           id="mickeyMouse"
           name="president"
-          type="radio"
+          type="checkbox"
           value="mickeyMouse"
         />
          
@@ -225,7 +227,7 @@ exports[`renders SingleCandidateContest with no selection 1`] = `
           class="c4"
           id="donaldDuck"
           name="president"
-          type="radio"
+          type="checkbox"
           value="donaldDuck"
         />
          
